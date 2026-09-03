@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Github, Instagram, Linkedin, Mail, MessageCircle, Send } from "lucide-react";
 import { toast } from "sonner";
+import { handleExternalClick, openExternal } from "@/lib/open-external";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const CHANNELS = [
@@ -39,7 +40,7 @@ export function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`${form.service} — enquiry from ${form.name}`);
     const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
-    window.location.href = `mailto:tq.alhamada@gmail.com?subject=${subject}&body=${body}`;
+    openExternal(`mailto:tq.alhamada@gmail.com?subject=${subject}&body=${body}`);
     toast.success("Opening your email client…", {
       description: "Your message is ready to send to Tawfiq.",
     });
@@ -142,9 +143,10 @@ export function Contact() {
               <a
                 key={c.label}
                 href={c.href}
-                target={c.href.startsWith("mailto") ? undefined : "_blank"}
+                onClick={handleExternalClick(c.href)}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="panel group flex items-center gap-4 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40"
+                className="panel group flex cursor-pointer items-center gap-4 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40"
               >
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-border text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                   <c.icon className="size-5" />

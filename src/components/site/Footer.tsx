@@ -1,4 +1,5 @@
 import { Github, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { handleExternalClick } from "@/lib/open-external";
 
 const SOCIALS = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/tawfiq-alhamada/", label: "LinkedIn" },
@@ -26,6 +27,7 @@ export function Footer() {
               <a
                 key={label}
                 href={href}
+                onClick={handleExternalClick(href)}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
