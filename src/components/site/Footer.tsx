@@ -1,9 +1,9 @@
 import { Github, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const SOCIALS = [
-  { icon: Linkedin, href: "https://www.linkedin.com/in/tawfiq-alhamada", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/tawfiq-alhamada/", label: "LinkedIn" },
   { icon: Github, href: "https://github.com/Tawfiq-Alh", label: "GitHub" },
-  { icon: Instagram, href: "https://instagram.com/tawfiq_alhamada", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/tawfiq_alhamada/", label: "Instagram" },
   { icon: MessageCircle, href: "https://wa.me/963995004688", label: "WhatsApp" },
 ];
 
@@ -27,7 +27,7 @@ export function Footer() {
                 key={label}
                 href={href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="text-muted-foreground transition-colors duration-300 hover:text-primary"
               >
