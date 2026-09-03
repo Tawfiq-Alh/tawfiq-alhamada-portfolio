@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Github, X } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import { PROJECTS, type Project } from "./projects-data";
 import { Reveal, SectionHeading } from "./Reveal";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -12,10 +12,9 @@ const STEPS = [
   { key: "impact", label: "Impact", hint: "What measurably improved?" },
 ] as const;
 
-function CaseStudy({ project, onClose }: { project: Project; onClose: () => void }) {
+function CaseStudy({ project }: { project: Project }) {
   return (
     <DialogContent
-      showCloseButton={false}
       className="max-h-[90vh] max-w-4xl overflow-y-auto border-border bg-background p-0"
     >
       <div className="relative">
@@ -28,13 +27,6 @@ function CaseStudy({ project, onClose }: { project: Project; onClose: () => void
           className="h-56 w-full object-cover sm:h-72"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-        <button
-          onClick={onClose}
-          aria-label="Close case study"
-          className="absolute right-4 top-4 inline-flex size-9 items-center justify-center rounded-md border border-border bg-background/70 backdrop-blur transition-colors hover:border-primary/50"
-        >
-          <X className="size-4" />
-        </button>
         <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
           <p className="eyebrow">{project.category}</p>
           <DialogTitle className="mt-3 font-display text-2xl font-semibold sm:text-4xl">
@@ -198,7 +190,7 @@ export function Projects() {
       </div>
 
       <Dialog open={!!open} onOpenChange={(v) => !v && setOpen(null)}>
-        {open && <CaseStudy project={open} onClose={() => setOpen(null)} />}
+        {open && <CaseStudy project={open} />}
       </Dialog>
     </section>
   );
