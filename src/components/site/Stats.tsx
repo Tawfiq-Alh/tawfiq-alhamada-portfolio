@@ -1,8 +1,6 @@
 import { useCountUp, useReveal } from "@/hooks/use-reveal";
 
 const STATS = [
-  { value: 1200, suffix: "+", label: "CRM Records", format: (n: number) => Math.round(n).toLocaleString() },
-  { value: 15, suffix: "+", label: "KPIs Designed" },
   { value: 97, suffix: "%", label: "Data Accuracy" },
   { value: 7, suffix: "+", label: "Featured Projects" },
 ];
