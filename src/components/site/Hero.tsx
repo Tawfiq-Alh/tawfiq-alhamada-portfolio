@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, ArrowUpRight, Github, Instagram, Linkedin } from "lucide-react";
-import portrait from "@/assets/tawfiq-portrait.jpg";
+import { ArrowDown, ArrowUpRight, Download, Github, Instagram, Linkedin } from "lucide-react";
+import portrait from "@/assets/tawfiq-profile.png";
 
 const NODES = [
   { x: 12, y: 22 },
@@ -58,10 +58,10 @@ function DataMesh() {
       {EDGES.map(([a, b], i) => (
         <line
           key={i}
-          x1={NODES[a].x}
-          y1={NODES[a].y}
-          x2={NODES[b].x}
-          y2={NODES[b].y}
+          x1={NODES[a]!.x}
+          y1={NODES[a]!.y}
+          x2={NODES[b]!.x}
+          y2={NODES[b]!.y}
           stroke="currentColor"
           className="text-support/40"
           strokeWidth={0.15}
@@ -146,12 +146,7 @@ export function Hero() {
           </div>
 
           <h1 className="mt-7 text-[2.6rem] font-semibold leading-[1.02] sm:text-6xl xl:text-7xl">
-            Software Engineer
-            <span className="mx-2 text-primary">×</span>
-            <br className="hidden sm:block" />
-            Data Analyst
-            <span className="mx-2 text-primary">×</span>
-            AI Consultant
+            Data <span className="text-primary">Analyst</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/85 sm:text-xl">
@@ -177,6 +172,14 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-md border border-border bg-surface/60 px-6 py-3.5 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50"
             >
               Let's Work Together
+            </a>
+            <a
+              href="/Tawfiq-Alhamada-CV.pdf"
+              download="Tawfiq-Alhamada-CV.pdf"
+              className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/20"
+            >
+              <Download className="size-4" />
+              Download CV
             </a>
           </div>
 
