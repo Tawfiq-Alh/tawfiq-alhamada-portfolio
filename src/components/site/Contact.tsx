@@ -9,7 +9,7 @@ const CHANNELS = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "in/tawfiq-alhamada",
-    href: "https://www.linkedin.com/in/tawfiq-alhamada",
+    href: "https://www.linkedin.com/in/tawfiq-alhamada/",
   },
   { icon: Github, label: "GitHub", value: "Tawfiq-Alh", href: "https://github.com/Tawfiq-Alh" },
   { icon: MessageCircle, label: "WhatsApp", value: "+963 995 004 688", href: "https://wa.me/963995004688" },
@@ -17,7 +17,7 @@ const CHANNELS = [
     icon: Instagram,
     label: "Instagram",
     value: "@tawfiq_alhamada",
-    href: "https://instagram.com/tawfiq_alhamada",
+    href: "https://www.instagram.com/tawfiq_alhamada/",
   },
 ];
 
@@ -143,7 +143,7 @@ export function Contact() {
                 key={c.label}
                 href={c.href}
                 target={c.href.startsWith("mailto") ? undefined : "_blank"}
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="panel group flex items-center gap-4 rounded-xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40"
               >
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-border text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">

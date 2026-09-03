@@ -37,9 +37,9 @@ export const Route = createFileRoute("/")({
           alumniOf: "Damascus University",
           address: { "@type": "PostalAddress", addressLocality: "Damascus", addressCountry: "SY" },
           sameAs: [
-            "https://www.linkedin.com/in/tawfiq-alhamada",
+            "https://www.linkedin.com/in/tawfiq-alhamada/",
             "https://github.com/Tawfiq-Alh",
-            "https://instagram.com/tawfiq_alhamada",
+            "https://www.instagram.com/tawfiq_alhamada/",
           ],
         }),
       },

@@ -76,7 +76,7 @@ function CaseStudy({ project }: { project: Project }) {
                 key={l.href}
                 href={l.href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2.5 text-sm transition-colors hover:border-primary/50 hover:text-primary"
               >
                 <Github className="size-4" />
@@ -173,7 +173,7 @@ export function Projects() {
                       <a
                         href={p.links[0].href}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
                         aria-label={`${p.title} on GitHub`}
                         className="text-muted-foreground transition-colors hover:text-primary"
