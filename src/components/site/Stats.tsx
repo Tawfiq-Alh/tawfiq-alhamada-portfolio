@@ -40,7 +40,7 @@ export function Stats() {
       <div className="grid-motif pointer-events-none absolute inset-0 opacity-20 [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]" />
       <div ref={ref} className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <p className="eyebrow">04 — Impact in numbers</p>
-        <div className="mt-10 grid grid-cols-2 gap-8 lg:grid-cols-5">
+        <div className="mt-10 grid grid-cols-2 gap-8 lg:grid-cols-3">
           {STATS.map((s) => (
             <Stat key={s.label} {...s} suffix={s.suffix} start={shown} />
           ))}
