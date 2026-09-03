@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Github, Instagram, Linkedin, Mail, MessageCircle, Send } from "lucide-react";
 import { toast } from "sonner";
+import { handleExternalClick, openExternal } from "@/lib/open-external";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const CHANNELS = [
@@ -39,7 +40,7 @@ export function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`${form.service} — enquiry from ${form.name}`);
     const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
-    window.location.href = `mailto:tq.alhamada@gmail.com?subject=${subject}&body=${body}`;
+    openExternal(`mailto:tq.alhamada@gmail.com?subject=${subject}&body=${body}`);
     toast.success("Opening your email client…", {
       description: "Your message is ready to send to Tawfiq.",
     });

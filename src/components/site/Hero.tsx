@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowUpRight, Download, Github, Instagram, Linkedin } from "lucide-react";
 import portrait from "@/assets/tawfiq-profile.png";
+import { handleExternalClick } from "@/lib/open-external";
 
 const NODES = [
   { x: 12, y: 22 },
@@ -192,6 +193,7 @@ export function Hero() {
               <a
                 key={label}
                 href={href}
+                onClick={handleExternalClick(href)}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
