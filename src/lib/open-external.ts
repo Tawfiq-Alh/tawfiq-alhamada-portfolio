@@ -1,3 +1,5 @@
+import type React from "react";
+
 /**
  * Opens an external link reliably, including inside sandboxed preview iframes
  * where plain target="_blank" / mailto: navigations can be blocked.
