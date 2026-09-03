@@ -58,10 +58,10 @@ function DataMesh() {
       {EDGES.map(([a, b], i) => (
         <line
           key={i}
-          x1={NODES[a].x}
-          y1={NODES[a].y}
-          x2={NODES[b].x}
-          y2={NODES[b].y}
+          x1={NODES[a]!.x}
+          y1={NODES[a]!.y}
+          x2={NODES[b]!.x}
+          y2={NODES[b]!.y}
           stroke="currentColor"
           className="text-support/40"
           strokeWidth={0.15}
