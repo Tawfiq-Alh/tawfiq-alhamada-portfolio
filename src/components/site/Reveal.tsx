@@ -13,11 +13,11 @@ export function Reveal({
   delay?: number;
   as?: "div" | "li" | "section" | "article";
 }) {
-  const { ref, shown } = useReveal<HTMLDivElement>();
+  const { ref, shown } = useReveal<HTMLElement>();
   return (
-    // @ts-expect-error polymorphic tag
     <Tag
-      ref={ref}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ref={ref as any}
       style={{ transitionDelay: `${delay}ms` }}
       className={cn("reveal", shown && "reveal-in", className)}
     >
