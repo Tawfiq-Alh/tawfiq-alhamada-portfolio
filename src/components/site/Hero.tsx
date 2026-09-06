@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, ArrowUpRight, Download, Github, Instagram, Linkedin } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Github, Instagram, Linkedin } from "lucide-react";
 import portrait from "@/assets/tawfiq-profile.png";
 import { handleExternalClick } from "@/lib/open-external";
 
