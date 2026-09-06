@@ -2,27 +2,30 @@ import { useCountUp, useReveal } from "@/hooks/use-reveal";
 
 const STATS = [
   { value: 97, suffix: "%", label: "Data Accuracy" },
-  { value: 7, suffix: "+", label: "Featured Projects" },
+  { value: 100, suffix: "%", label: "Data-Driven Decisions" },
+  { value: 15, suffix: "%+", label: "Revenue Growth" },
+  { value: 10, suffix: "x", label: "Faster Reporting", prefix: "" },
 ];
 
 function Stat({
   value,
   suffix,
   label,
-  format,
+  prefix,
   start,
 }: {
   value: number;
   suffix: string;
   label: string;
-  format?: (n: number) => string;
+  prefix?: string;
   start: boolean;
 }) {
   const n = useCountUp(value, 1800, start);
   return (
     <div className="border-l border-border pl-5 sm:pl-6">
       <p className="font-display text-4xl font-semibold text-primary sm:text-5xl">
-        {format ? format(n) : Math.round(n)}
+        {prefix}
+        {Math.round(n)}
         <span className="text-foreground/70">{suffix}</span>
       </p>
       <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
@@ -40,18 +43,10 @@ export function Stats() {
       <div className="grid-motif pointer-events-none absolute inset-0 opacity-20 [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]" />
       <div ref={ref} className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <p className="eyebrow">04 — Impact in numbers</p>
-        <div className="mt-10 grid grid-cols-2 gap-8 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-8 lg:grid-cols-4">
           {STATS.map((s) => (
             <Stat key={s.label} {...s} suffix={s.suffix} start={shown} />
           ))}
-          <div className="border-l border-border pl-5 sm:pl-6">
-            <p className="font-display text-4xl font-semibold sm:text-5xl">
-              6h <span className="text-primary">→</span> 30m
-            </p>
-            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-              Reporting Time
-            </p>
-          </div>
         </div>
       </div>
     </section>
