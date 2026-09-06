@@ -174,14 +174,6 @@ export function Hero() {
             >
               Let's Work Together
             </a>
-            <a
-              href="/Tawfiq-Alhamada-CV.pdf"
-              download="Tawfiq-Alhamada-CV.pdf"
-              className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/20"
-            >
-              <Download className="size-4" />
-              Download CV
-            </a>
           </div>
 
           <div className="mt-10 flex items-center gap-5">
