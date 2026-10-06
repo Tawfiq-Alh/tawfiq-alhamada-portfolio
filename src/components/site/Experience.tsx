@@ -215,7 +215,7 @@ const ROLES: Role[] = [
 ];
 
 function LinkChip({ link }: { link: RoleLink }) {
-  const Icon = link.kind === "github" ? Github : Gitlab;
+  const Icon = link.kind === "github" ? Github : link.kind === "gitlab" ? Gitlab : Link2;
   return (
     <a
       href={link.href}
