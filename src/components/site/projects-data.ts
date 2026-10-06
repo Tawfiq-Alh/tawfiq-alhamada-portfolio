@@ -53,66 +53,57 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    id: "afaq",
+    id: "hackathon-syria",
     no: "02",
-    title: "AFAQ Real Estate Investment Platform",
-    category: "Software Engineering • Data • Business Intelligence",
+    title: "Hackathon Syria — Handicraft Marketplace App",
+    category: "Hackathon • Mobile App Development • Community Impact",
     image: projApp,
     description:
-      "A co-investment real estate platform with investment history, property overviews, risk analysis, and digital investment workflows. I designed the CRM database architecture and led mobile development.",
-    tech: [
-      "Flutter",
-      "Dart",
-      "Laravel",
-      "REST API",
-      "Firebase",
-      "BLoC",
-      "Power BI",
-      "KPI Design",
-    ],
+      "A mobile application for selling handmade crafts, empowering local artisans to showcase and sell their products online, and supporting sustainable community-driven entrepreneurship.",
+    tech: ["Flutter", "Dart", "Laravel", "REST API", "Firebase"],
     impact: [
-      "1,200+ CRM records",
-      "15+ KPIs defined",
-      "Real-time performance dashboard",
-      "Revenue & conversion analysis",
+      "Developed within two weeks",
+      "Online storefront for local artisans",
+      "Community-driven entrepreneurship",
     ],
-    links: [
-      { label: "GitHub", href: "https://github.com/Tawfiq-Alh/real_estate_investment_lawyer_app" },
-    ],
+    links: [],
     caseStudy: {
       challenge:
-        "Co-investment in real estate required both a trustworthy digital investor experience and a CRM that could measure how the business was actually performing.",
+        "Hackathon Syria is the first event of its kind bringing together innovators from across Syria and around the world to develop creative solutions for the country's most pressing challenges — including education, technology, infrastructure, and economic development.",
       approach:
-        "Designed the CRM data architecture first so every user action produced clean, analyzable records, then built the mobile experience on top of it.",
-      technology: "Flutter with BLoC, Laravel REST APIs, Firebase, Power BI for the KPI layer.",
+        "Joined a team focused on economic development, and scoped a solution that could realistically be designed, built, and delivered within a two-week event window.",
+      technology: "Flutter for the cross-platform mobile app, Laravel REST API backend, Firebase services.",
       solution:
-        "An investor app covering property overviews, risk analysis, and investment history, backed by a CRM and a live performance dashboard.",
+        "A mobile application for selling handmade crafts — giving local artisans a way to showcase and sell their products online.",
       impact:
-        "1,200+ CRM records structured, 15+ KPIs defined, and real-time revenue and conversion analysis available to the team.",
+        "Local artisans gained a digital channel to reach customers, supporting sustainable, community-driven entrepreneurship.",
     },
   },
   {
-    id: "ngo",
+    id: "field-research",
     no: "03",
-    title: "NGO Monitoring & Reporting Dashboard",
-    category: "MEAL • Data Analytics • Humanitarian Data",
+    title: "Field Research — Ministry of Sports & Youth",
+    category: "Field Research • Data Collection • Public Policy",
     image: projBi,
     description:
-      "A monitoring and reporting system connecting field data collection directly to executive-level reporting.",
-    tech: ["KoBo Toolbox", "Excel", "Power BI"],
-    impact: ["97% data accuracy across 500+ records", "Reporting time: 6 hours → 30 minutes"],
+      "Field interviews with youth across Damascus, collecting perspectives, aspirations, and priorities to inform the National Youth Strategy 2026–2030.",
+    tech: ["Field Interviews", "Data Collection", "Qualitative Analysis"],
+    impact: [
+      "Youth perspectives collected across Damascus",
+      "Collaboration within a 5-researcher field team",
+      "Insights supporting the National Youth Strategy 2026–2030",
+    ],
     links: [],
-    flow: ["Field Data", "Clean Data", "KPI", "Dashboard", "Decision"],
     caseStudy: {
       challenge:
-        "Field data arrived inconsistent and late, and every report was rebuilt by hand — six hours of manual work with real risk of error.",
+        "The National Youth Strategy 2026–2030 needed grounded evidence about what young people in Damascus actually aspire to and prioritize — not assumptions made on their behalf.",
       approach:
-        "Standardized collection forms, added validation at the point of entry, and defined a fixed set of MEAL indicators worth tracking.",
-      technology: "KoBo Toolbox and XLS Forms for collection, Excel for cleaning, Power BI for reporting.",
+        "Conducted structured field interviews with youth across the city, collaborating within a field research team of 5 researchers covering Damascus.",
+      technology: "Structured interview guides, field data collection, qualitative synthesis of responses.",
       solution:
-        "An end-to-end pipeline from field enumerator to executive dashboard, with quality checks between each stage.",
+        "A structured body of first-hand youth perspectives, aspirations, and priorities collected directly from the field.",
       impact:
-        "97% data accuracy across 500+ records and reporting time cut from 6 hours to 30 minutes.",
+        "The collected field insights supported the development of the National Youth Strategy 2026–2030.",
     },
   },
   {
