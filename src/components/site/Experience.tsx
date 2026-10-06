@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { ChevronDown, ExternalLink, Github, Gitlab } from "lucide-react";
+import { ChevronDown, ExternalLink, Github, Gitlab, Link2 } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 import { cn } from "@/lib/utils";
 
 type RoleLink = {
   label: string;
   href: string;
-  kind: "github" | "gitlab";
+  kind: "github" | "gitlab" | "external";
 };
 
 type RoleSection = {
