@@ -1,31 +1,50 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ExternalLink, Github, Gitlab } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 import { cn } from "@/lib/utils";
 
-const ROLES = [
+type RoleLink = {
+  label: string;
+  href: string;
+  kind: "github" | "gitlab";
+};
+
+type RoleSection = {
+  heading: string;
+  points: string[];
+};
+
+type Role = {
+  role: string;
+  org: string;
+  period: string;
+  points: string[];
+  intro?: string;
+  sections?: RoleSection[];
+  links?: RoleLink[];
+};
+
+const ROLES: Role[] = [
   {
-    role: "MEAL Assistant / Data Analyst",
-    org: "Mizan Organization for Research & Human Rights",
+    role: "MEAL Assistant and Data Analyst",
+    org: "Mizan Organization for Research and Human Rights — Damascus, Syria",
     period: "Mar 2025 – Aug 2025",
     points: [
-      "Data collection, cleaning and validation across field programs",
-      "KoBo Toolbox, Google Forms, Excel and Power BI reporting stack",
-      "PDM, baseline and endline surveys",
-      "97% data accuracy maintained",
-      "Reporting time reduced from 6 hours to 30 minutes",
+      "Performed data cleaning, validation, and quality assurance processes to ensure accuracy and consistency.",
+      "Analyzed quantitative and qualitative datasets to identify trends and support program monitoring.",
+      "Developed Excel and Power BI dashboards to track project performance indicators and operational metrics.",
+      "Prepared analytical reports and summaries to support evidence-based decision-making.",
+      "Supported monitoring, evaluation, and learning activities through data management and reporting processes.",
     ],
   },
   {
-    role: "Data Coordinator & Systems Analyst",
-    org: "DIGIT Innovation Hub — UNDP Syria Initiative",
-    period: "Jan 2025 – Jun 2025",
+    role: "Data Analyst (Project)",
+    org: "Violet Organization – DIGIT Innovation Hub (UNDP Supported Initiative) — Damascus, Syria",
+    period: "Apr 2025 – Jun 2025",
     points: [
-      "Designed the CRM database architecture",
-      "Defined 15+ KPIs for business performance tracking",
-      "Built the Power BI performance dashboard",
-      "Conversion and revenue analysis",
-      "Cross-functional collaboration with business and tech teams",
+      "Designed and tracked business-aligned KPIs, conducting data analysis to identify operational trends and performance patterns.",
+      "Developed interactive Power BI dashboards for real-time monitoring, translating complex reporting requirements into structured datasets.",
+      "Generated actionable insights to support decision-making, collaborating closely with multidisciplinary teams (developers, marketing, and mobile app teams).",
     ],
   },
   {
@@ -39,25 +58,112 @@ const ROLES = [
     ],
   },
   {
-    role: "Flutter Application Developer",
-    org: "Property Partnership Platform",
+    role: "Application Developer",
+    org: "EASY Investment — Real Estate Investment Platform",
     period: "Jan 2025 – Sep 2025",
-    points: [
-      "Flutter with BLoC state management",
-      "REST API and Laravel backend integration",
-      "Firebase services and authentication",
-      "Responsive UI across device sizes",
+    points: [],
+    intro:
+      "EASY Investment is a trusted real estate investment platform that combines both economic and legal integration. It enables property owners and investors to participate easily, make secure decisions, and achieve sustainable income.",
+    sections: [
+      {
+        heading: "Development Approach",
+        points: [
+          "Adopted the Waterfall Model methodology",
+          "Client–Server Architecture",
+        ],
+      },
+      {
+        heading: "Tech Stack",
+        points: [
+          "FrontEnd: Flutter (Visual Studio / Android Studio)",
+          "BackEnd: Laravel (PHPStorm)",
+          "Database: MySQL (XAMPP Server)",
+          "IDE Tools: IntelliJ, Android Studio",
+        ],
+      },
+      {
+        heading: "Key Outcomes",
+        points: [
+          "Built a platform with a clear Dashboard for both investors and legal advisors.",
+          "Integrated expert team and platform manager functionalities for operational and legal support.",
+        ],
+      },
+      {
+        heading: "Skills Gained",
+        points: [
+          "Cross-platform mobile app development with Flutter",
+          "Database management using MySQL",
+          "API development and backend integration with Laravel",
+          "Project lifecycle management using the Waterfall Model",
+          "Collaboration within a multidisciplinary team",
+          "Firebase services and authentication",
+          "Responsive UI across device sizes",
+        ],
+      },
+    ],
+    links: [
+      {
+        label: "salvest-app",
+        href: "https://github.com/Tawfiq-Alh/salvest-app",
+        kind: "github",
+      },
+      {
+        label: "real_estate_investment_lawyer_app",
+        href: "https://github.com/Tawfiq-Alh/real_estate_investment_lawyer_app",
+        kind: "github",
+      },
     ],
   },
   {
-    role: "Flutter Application Developer — Freelance",
-    org: "Violet Kindergarten",
-    period: "Mar 2023 – Sep 2023",
-    points: [
-      "Kindergarten management application",
-      "Attendance and activity tracking",
-      "Staff–parent communication features",
-      "Flutter, Laravel, REST APIs",
+    role: "Application Developer — Freelance",
+    org: "Freelance · Damascus Governorate, Syria · Remote",
+    period: "Mar 2023 – Aug 2023 · 6 mos",
+    points: [],
+    intro:
+      "Developed a cross-platform mobile application to digitize daily operations at Violet Kindergarten, replacing manual attendance tracking and disconnected staff communication with a unified, real-time system.",
+    sections: [
+      {
+        heading: "The Problem",
+        points: [
+          "The kindergarten relied on paper-based attendance logs and informal messaging between staff, leading to delayed parent updates, inconsistent activity records, and no centralized view of children's daily status.",
+        ],
+      },
+      {
+        heading: "The Solution",
+        points: [
+          "Built a full-featured Flutter mobile app integrated with a Laravel REST API backend, enabling staff to record attendance, log daily activities, and communicate in real time — accessible from any device, at any time.",
+        ],
+      },
+      {
+        heading: "Key Contributions",
+        points: [
+          "Designed and implemented 15+ intuitive UI screens covering attendance, activity logs, and staff messaging workflows.",
+          "Integrated REST API endpoints to sync data between the mobile app and Laravel backend in real time.",
+          "Implemented Cubit (BLoC) for predictable, testable state management across complex screens.",
+          "Built and consumed Laravel backend services for authentication, attendance records, and activity data.",
+          "Translated kindergarten staff requirements into data-driven features, reducing manual record-keeping time.",
+          "Collaborated cross-functionally with backend developers and kindergarten staff to refine workflows based on real usage feedback.",
+          "Delivered the project on schedule across a 6-month engagement.",
+        ],
+      },
+      {
+        heading: "Technologies & Skills",
+        points: [
+          "Flutter • Dart • Laravel • REST API • Cubit/BLoC State Management • Cross-functional Collaboration • Agile Delivery",
+        ],
+      },
+    ],
+    links: [
+      {
+        label: "Teacher_App",
+        href: "https://gitlab.com/twfek.alhmada/teacher_app",
+        kind: "gitlab",
+      },
+      {
+        label: "Child Care Management",
+        href: "https://gitlab.com/compiler4781817/child-care-management",
+        kind: "gitlab",
+      },
     ],
   },
   {
@@ -71,6 +177,83 @@ const ROLES = [
     ],
   },
 ];
+
+function LinkChip({ link }: { link: RoleLink }) {
+  const Icon = link.kind === "github" ? Github : Gitlab;
+  return (
+    <a
+      href={link.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-surface/40 px-3.5 py-1.5 font-mono text-[11px] tracking-wide text-foreground/85 transition-colors duration-300 hover:border-primary/60 hover:text-primary"
+    >
+      <Icon className="size-3.5" />
+      {link.label}
+      <ExternalLink className="size-3 text-muted-foreground" />
+    </a>
+  );
+}
+
+function RoleBody({ r }: { r: Role }) {
+  return (
+    <div className="overflow-hidden">
+      <div className="space-y-5 pb-6">
+        {r.intro ? (
+          <p className="text-sm leading-relaxed text-foreground/85">{r.intro}</p>
+        ) : null}
+
+        {r.sections
+          ? r.sections.map((s) => (
+              <div key={s.heading}>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-primary">
+                  {s.heading}
+                </p>
+                {s.points.length === 1 ? (
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/85">
+                    {s.points[0]}
+                  </p>
+                ) : (
+                  <ul className="mt-2 space-y-2">
+                    {s.points.map((p) => (
+                      <li
+                        key={p}
+                        className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground/85"
+                      >
+                        <span className="mt-2 size-1 shrink-0 rounded-full bg-primary" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))
+          : null}
+
+        {r.points.length > 0 ? (
+          <ul className="space-y-2">
+            {r.points.map((p) => (
+              <li
+                key={p}
+                className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground/85"
+              >
+                <span className="mt-2 size-1 shrink-0 rounded-full bg-primary" />
+                {p}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+        {r.links && r.links.length > 0 ? (
+          <div className="flex flex-wrap gap-2 pt-1">
+            {r.links.map((l) => (
+              <LinkChip key={l.href} link={l} />
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+}
 
 export function Experience() {
   const [open, setOpen] = useState<number | null>(0);
@@ -122,19 +305,7 @@ export function Experience() {
                       isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
                     )}
                   >
-                    <div className="overflow-hidden">
-                      <ul className="space-y-2 pb-6">
-                        {r.points.map((p) => (
-                          <li
-                            key={p}
-                            className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground/85"
-                          >
-                            <span className="mt-2 size-1 shrink-0 rounded-full bg-primary" />
-                            {p}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <RoleBody r={r} />
                   </div>
                 </div>
               </Reveal>
