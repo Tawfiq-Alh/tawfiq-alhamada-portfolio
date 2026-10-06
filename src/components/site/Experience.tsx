@@ -38,13 +38,49 @@ const ROLES: Role[] = [
     ],
   },
   {
-    role: "Data Analyst (Project)",
-    org: "Violet Organization – DIGIT Innovation Hub (UNDP Supported Initiative) — Damascus, Syria",
+    role: "Data Analyst | CRM & Business Intelligence",
+    org: "AFAQ Real Estate Investment Platform — Violet Organization – DIGIT Innovation Hub (UNDP Supported Initiative) | Damascus, Syria",
     period: "Apr 2025 – Jun 2025",
-    points: [
-      "Designed and tracked business-aligned KPIs, conducting data analysis to identify operational trends and performance patterns.",
-      "Developed interactive Power BI dashboards for real-time monitoring, translating complex reporting requirements into structured datasets.",
-      "Generated actionable insights to support decision-making, collaborating closely with multidisciplinary teams (developers, marketing, and mobile app teams).",
+    points: [],
+    intro:
+      "As part of a cross-functional team at Violet Organization, I contributed to building AFAQ, a simulated real estate company designed from the ground up to demonstrate how technology and data can support real-world business operations.",
+    sections: [
+      {
+        heading: "Project Overview",
+        points: [
+          "The project brought together a complete digital ecosystem including a corporate website, CRM system, data analytics dashboard, and a mobile application for sales representatives and brokers.",
+        ],
+      },
+      {
+        heading: "My Role",
+        points: [
+          "My role focused on transforming operational data into measurable business insights and decision-support tools.",
+          "Built and structured a CRM database with 1,200+ records, simulating realistic customer and sales data.",
+          "Designed 15+ business KPIs aligned with measurable commercial objectives.",
+          "Analyzed conversion rates, Cost per Lead (CPL), and monthly revenue to evaluate business performance.",
+          "Developed Power BI dashboards to monitor performance and provide management with actionable insights.",
+          "Supported business decisions through data-driven analysis rather than assumptions.",
+        ],
+      },
+      {
+        heading: "Technology",
+        points: [
+          "Power BI · DAX · SQL · CRM · Data Analysis · KPI Design · Flutter · Laravel · Firebase",
+        ],
+      },
+      {
+        heading: "Outcome",
+        points: [
+          "The AFAQ project was recognized as one of the successful and distinguished projects, demonstrating how integrated software systems, CRM data, and business intelligence can work together to support better decision-making.",
+        ],
+      },
+    ],
+    links: [
+      {
+        label: "AFAQ — Project Overview",
+        href: "https://lnkd.in/p/eMzb9VxH",
+        kind: "external",
+      },
     ],
   },
   {
